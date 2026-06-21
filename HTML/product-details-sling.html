@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAG STORE</title>
+
+    <link rel="icon" href="/images/IMG_0494.JPG">
+
+    <link rel="stylesheet" href="/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/about-page.css">
+    <link rel="stylesheet" href="/CSS/contact-page.css">
+    <link rel="stylesheet" href="/CSS/product-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"rel="stylesheet" />
+</head>
+<body>
+
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+    
+            <!-- Logo -->
+            <a class="navbar-brand d-flex justify-content-center align-items-center" href="/HTML/index.html"
+                style="width: 200px; height: 90px;">
+                <!-- BagStore -->
+                <img src="/images/logo/ML Studio LOGO.png" alt="logo-ml-studio">
+            </a>
+    
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Menu Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+    
+                <ul class="navbar-nav ms-auto">
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/HTML/index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/HTML/products.html">Product</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/about.html">About</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/contact.html">Contact</a>
+                    </li>
+    
+                </ul>
+                <!-- Login and Register Button ======================================-->
+    
+                <!-- Login button ===============-->
+                <label class="btn-open-login ms-lg-5" for="login-toggle">Login</label>
+    
+                <!-- Line seperate -->
+                <div style="width:1px;height:30px;background:black; margin-left: 10px; margin-right: 10px;"></div>
+                <!-- Line seperate -->
+    
+                <!-- Register button================== -->
+                <label class="btn-open-register" for="register-toggle">Register</label>
+    
+            </div>
+    
+        </div>
+    </nav>
+
+    <!-- Login/Register checkboxes & modals (must be siblings at body level for CSS ~ selector) -->
+    <input type="checkbox" id="login-toggle" />
+    <input type="checkbox" id="register-toggle" />
+
+    <!-- Login Overlay + Modal -->
+    <div class="modal-overlay login-overlay">
+        <label for="login-toggle" style="position:absolute;inset:0;cursor:default;" aria-label="Close"></label>
+
+        <div class="modal-card">
+
+            <!-- Left -->
+            <div class="modal-left">
+                <h2>Hello,<br>Welcome!</h2>
+                <p>Don't have an account?</p>
+                <a href="javascript:void(0)" class="btn-register-link"
+                    onclick="document.getElementById('login-toggle').checked=false; document.getElementById('register-toggle').checked=true;">Register</a>
+            </div>
+
+            <!-- Right -->
+            <div class="modal-right">
+                <label class="btn-close-modal" for="login-toggle" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </label>
+
+                <h3>Login</h3>
+
+                <div class="field-wrap">
+                    <input type="text" placeholder="Username" autocomplete="username" />
+                    <i class="bi bi-person field-icon"></i>
+                </div>
+
+                <div class="field-wrap">
+                    <input type="password" placeholder="Password" autocomplete="current-password" />
+                    <i class="bi bi-lock field-icon"></i>
+                </div>
+
+                <a href="#" class="forgot-link">Forgot password?</a>
+
+                <button class="btn-login" type="submit">Login</button>
+
+                <p class="social-divider">or login with social platforms</p>
+
+                <div class="social-buttons">
+                    <a href="#" class="social-btn google" title="Google"> <i class="bi bi-google"></i> </a>
+                    <a href="#" class="social-btn facebook" title="Facebook"> <i class="bi bi-facebook"></i> </a>
+                    <a href="#" class="social-btn apple" title="Apple"> <i class="bi bi-apple"></i> </a>
+                    <a href="#" class="social-btn tiktok" title="Tiktok"> <i class="bi bi-tiktok"></i> </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Register Overlay + Modal -->
+    <div class="modal-overlay register-overlay">
+        <label for="register-toggle" style="position:absolute;inset:0;cursor:default;" aria-label="Close"></label>
+
+        <div class="modal-card">
+
+            <!-- Left -->
+            <div class="modal-left">
+                <h2>Join Us<br>Today!</h2>
+                <p>Already have an account?</p>
+                <a href="javascript:void(0)" class="btn-register-link"
+                    onclick="document.getElementById('register-toggle').checked=false; document.getElementById('login-toggle').checked=true;">Login</a>
+            </div>
+
+            <!-- Right -->
+            <div class="modal-right">
+                <label class="btn-close-modal" for="register-toggle" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                </label>
+
+                <h3>Register</h3>
+
+                <div class="field-wrap">
+                    <input type="text" placeholder="Username" autocomplete="username" />
+                    <i class="bi bi-at field-icon"></i>
+                </div>
+
+                <div class="field-wrap">
+                    <input type="email" placeholder="Email Address" autocomplete="email" />
+                    <i class="bi bi-envelope field-icon"></i>
+                </div>
+
+                <div class="field-wrap">
+                    <input type="password" placeholder="Password" autocomplete="new-password" />
+                    <i class="bi bi-lock field-icon"></i>
+                </div>
+
+                <button class="btn-register" type="submit">Create Account</button>
+
+                <p class="social-divider">or register with social platforms</p>
+
+                <div class="social-buttons">
+                    <a href="#" class="social-btn google" title="Google"> <i class="bi bi-google"></i> </a>
+                    <a href="#" class="social-btn facebook" title="Facebook"> <i class="bi bi-facebook"></i> </a>
+                    <a href="#" class="social-btn apple" title="Apple"> <i class="bi bi-apple"></i> </a>
+                    <a href="#" class="social-btn tiktok" title="Tiktok"> <i class="bi bi-tiktok"></i> </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Product detail  ==================================-->
+    <section class="container py-5">
+
+        <!-- Back to Products-->
+        <div class="mb-4">
+            <a href="/HTML/products.html" class="btn gold-btn">
+                ← Back to Products
+            </a>
+        </div>
+
+
+        <div class="row g-5">
+
+            <!-- Product Image -->
+            <div class="col-lg-6">
+                <img src="/images/products/Sling-01.avif"
+                    class="img-fluid rounded shadow"
+                    alt="Product">
+            </div>
+
+            <!-- Product Information -->
+            <div class="col-lg-6">
+
+                <h1 class="fw-bold mb-3">
+                    Carryology Essentials Sling
+                </h1>
+
+                <h3 class="text-danger mb-4">
+                    $35
+                </h3>
+
+                <p class="lead">
+                    Stylish and durable sling for daily use.
+                </p>
+
+                <h5 class="mt-4">
+                    Features
+                </h5>
+
+                <ul>
+                    <li>Special edition</li>
+                    <li>Expandable storage</li>
+                    <li>Two-way zipper</li>
+                    <li>Water-resistant coated zippers</li>
+                </ul>
+
+                <a href="#" class="btn green-btn btn-lg mt-3">
+                    Add To Cart
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+
+
+    
+    <!-- Footer -->
+    <footer class="footer-section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <!-- Logo & Description -->
+                <div class="col-lg-4">
+
+                    <a href="index.html" class="footer-logo d-flex justify-content-center align-items-end" style="width: 200px; height: 90px;">
+                        <img src="/images/logo/ML Studio LOGO.png"
+                        alt="ML Studio Logo"
+                        >
+                    </a>
+
+                    <p class="footer-text mt-3">
+                        Premium bags designed for modern lifestyles.
+                        Combining elegance, minimal style, and comfort in every situation.
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4">
+
+                    <h5 class="footer-title">
+                        Quick Links
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+
+                    <h5 class="footer-title">
+                        Contact Info
+                    </h5>
+
+                    <a href="" class="text-decoration-none text-body"><p><i class="fa-solid fa-location-dot fa-lg"></i> Phnom Penh, Royal University of Phnom Penh</p></a>
+                    <a href="" class="text-decoration-none text-body"><p><i class="fa-solid fa-phone fa-lg"></i> +885 964 663 885</p></a>
+                    <a href="" class="text-decoration-none text-body"><p><i class="fa-solid fa-envelope fa-lg"></i> MLStudio@gmail.com</p></a>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center pt-3">
+
+                <p class="mb-0">
+                    © 2026 ML Studio. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/JS/navbar-modal.js"></script>
+</body>
+</html>
